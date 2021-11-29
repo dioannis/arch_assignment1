@@ -44,3 +44,39 @@
 **βιβλιογραφία:** 
 		 * Για τον SimpleCPU: [https://www.gem5.org/documentation/general_docs/cpu_models/SimpleCPU](https://www.gem5.org/documentation/general_docs/cpu_models/SimpleCPU)
 		 * Για τον MinorCPU: [https://www.gem5.org/documentation/general_docs/cpu_models/minor_cpu](https://www.gem5.org/documentation/general_docs/cpu_models/minor_cpu)
+
+Στη συνέχεια φτιάξαμε το εξής πρόγραμμα στη C με όνομα simple.c
+		
+
+
+
+a) Με τύπο **MinorCPU** το script "se.py" εκτελέστηκε σε 0.000035s
+	Με τύπο **TimingSimpleCPU** το script "se.py" εκτελέστηκε σε 0.000040s
+
+b) Αρχικά χρησιμοποιούμε **MinorCPU** και αλλάζουμε συχνότητες.
+* **MinorCPU και 10ΜHz**	
+	 χρόνος εκτέλεσης: 0,000706s
+* **MinorCPU και 100MHz**
+	χρόνος εκτέλεσης: 0,000093s
+*  **MinorCPU και 2GHz**
+    χρόνος εκτέλεσης: 0,000032s
+
+Μετά αλλάξαμε τύπο CPU:
+*  **TimingSimpleCPU και 10MHz**
+χρόνος εκτέλεσης: 0,000671s
+*  **TimingSimpleCPU και 100MHz**
+χρόνος εκτέλεσης: 0,000095s
+*  **TimingSimpleCPU και2GHz**
+χρόνος εκτέλεσης: 0,000037s
+	 
+Μετά πάλι με **MinorCPU** και αλλάζουμε μνήμες.
+* **MinorCPU και DDR3**
+χρόνος εκτέλεσης: 0,000035s
+* **MinorCPU και DDR4_2400_8x8**
+χρόνος εκτέλεσης: 0,000034s
+
+Και τέλος αλλάζουμε τύπο CPU:
+* **TimingSimpleCPU και DDR3**
+χρόνος εκτέλεσης: 0,000040s
+* **TimingSimpleCPU και DDR4_2400_8x8**
+χρόνος εκτέλεσης: 0,000039s
