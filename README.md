@@ -46,12 +46,22 @@
 		 * Για τον MinorCPU: [https://www.gem5.org/documentation/general_docs/cpu_models/minor_cpu](https://www.gem5.org/documentation/general_docs/cpu_models/minor_cpu)
 
 Στη συνέχεια φτιάξαμε το εξής πρόγραμμα στη C με όνομα simple.c
+
+	#include <stdio.h>
+	int main() {
+		
+		int number1 = 10 , number2 = 20 , sum;
+		
+		sum = number1 + number2;
+		
+		printf("%d + %d = %d" , number1 , number2 , sum);
+		return 0;
+	}
 		
 
 
 
-a) Με τύπο **MinorCPU** το script "se.py" εκτελέστηκε σε 0.000035s
-	Με τύπο **TimingSimpleCPU** το script "se.py" εκτελέστηκε σε 0.000040s
+a) Με τύπο **MinorCPU** το script "se.py" εκτελέστηκε σε 0.000035s , ενώ με τύπο **TimingSimpleCPU** το script "se.py" εκτελέστηκε σε 0.000040s
 
 b) Αρχικά χρησιμοποιούμε **MinorCPU** και αλλάζουμε συχνότητες.
 * **MinorCPU και 10ΜHz**	
